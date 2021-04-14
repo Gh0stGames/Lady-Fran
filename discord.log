@@ -1,0 +1,188 @@
+2021-04-14 19:36:39,059:DEBUG:discord.client: on_ready has successfully been registered as an event
+2021-04-14 19:36:39,059:DEBUG:discord.client: on_command_error has successfully been registered as an event
+2021-04-14 19:36:39,059:DEBUG:discord.client: on_member_join has successfully been registered as an event
+2021-04-14 19:36:39,059:INFO:discord.client: logging in using static token
+2021-04-14 19:36:39,272:DEBUG:discord.http: GET https://discord.com/api/v7/users/@me with None has returned 200
+2021-04-14 19:36:39,272:DEBUG:discord.http: GET https://discord.com/api/v7/users/@me has received {'id': '831043783881785344', 'username': 'Lady Fran', 'avatar': 'cfc84e0cdce669946fea79add2cb50ef', 'discriminator': '1510', 'public_flags': 0, 'flags': 0, 'bot': True, 'locale': 'en-US', 'mfa_enabled': False, 'email': None, 'verified': True}
+2021-04-14 19:36:39,314:DEBUG:discord.http: GET https://discord.com/api/v7/gateway with None has returned 200
+2021-04-14 19:36:39,314:DEBUG:discord.http: GET https://discord.com/api/v7/gateway has received {'url': 'wss://gateway.discord.gg'}
+2021-04-14 19:36:39,479:DEBUG:discord.gateway: Created websocket connected to wss://gateway.discord.gg?encoding=json&v=6&compress=zlib-stream
+2021-04-14 19:36:39,479:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:39,479:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 10, 'd': {'heartbeat_interval': 41250, '_trace': ['["gateway-prd-main-06z4",{"micros":0.0}]']}}
+2021-04-14 19:36:39,479:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:39,479:DEBUG:discord.client: Dispatching event socket_raw_send
+2021-04-14 19:36:39,480:DEBUG:discord.client: Dispatching event socket_raw_send
+2021-04-14 19:36:39,480:INFO:discord.gateway: Shard ID None has sent the IDENTIFY payload.
+2021-04-14 19:36:39,531:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:39,531:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:36:39,531:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:39,616:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:39,616:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'READY', 's': 1, 'op': 0, 'd': {'v': 6, 'user_settings': {}, 'user': {'verified': True, 'username': 'Lady Fran', 'mfa_enabled': False, 'id': '831043783881785344', 'flags': 0, 'email': None, 'discriminator': '1510', 'bot': True, 'avatar': 'cfc84e0cdce669946fea79add2cb50ef'}, 'session_id': 'e217e2749ed195da9bd2a71a5ece2f37', 'relationships': [], 'private_channels': [], 'presences': [], 'guilds': [{'unavailable': True, 'id': '831045634831155211'}], 'guild_join_requests': [], 'geo_ordered_rtc_regions': ['us-central', 'us-east', 'us-south', 'us-west', 'europe'], 'application': {'id': '831043783881785344', 'flags': 32768}, '_trace': ['["gateway-prd-main-06z4",{"micros":81644,"calls":["discord-sessions-prd-2-46",{"micros":75533,"calls":["start_session",{"micros":58016,"calls":["api-prd-main-kxt5",{"micros":54970,"calls":["get_user",{"micros":2607},"add_authorized_ip",{"micros":2918},"get_guilds",{"micros":11132},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":1,"calls":[]}]}]}]']}}
+2021-04-14 19:36:39,616:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:39,616:INFO:discord.gateway: Shard ID None has connected to Gateway: ["gateway-prd-main-06z4",{"micros":81644,"calls":["discord-sessions-prd-2-46",{"micros":75533,"calls":["start_session",{"micros":58016,"calls":["api-prd-main-kxt5",{"micros":54970,"calls":["get_user",{"micros":2607},"add_authorized_ip",{"micros":2918},"get_guilds",{"micros":11132},"coros_wait",{"micros":1}]}]},"guilds_connect",{"micros":1,"calls":[]},"presence_connect",{"micros":1,"calls":[]}]}]}] (Session ID: e217e2749ed195da9bd2a71a5ece2f37).
+2021-04-14 19:36:39,629:DEBUG:discord.client: Dispatching event connect
+2021-04-14 19:36:39,629:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:39,629:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_CREATE', 's': 2, 'op': 0, 'd': {'voice_states': [], 'rules_channel_id': None, 'system_channel_id': '831045635440246846', 'roles': [{'position': 0, 'permissions_new': '6546771521', 'permissions': 104320577, 'name': '@everyone', 'mentionable': False, 'managed': False, 'id': '831045634831155211', 'hoist': False, 'color': 0}, {'tags': {'bot_id': '831043783881785344'}, 'position': 1, 'permissions_new': '8', 'permissions': 8, 'name': 'Lady Fran', 'mentionable': False, 'managed': True, 'id': '831048100520656977', 'hoist': False, 'color': 0}, {'position': 2, 'permissions_new': '7888948825', 'permissions': 1446497881, 'name': 'Admin', 'mentionable': False, 'managed': False, 'id': '831322236266741771', 'hoist': True, 'color': 15844367}], 'member_count': 3, 'system_channel_flags': 0, 'presences': [], 'banner': None, 'discovery_splash': None, 'afk_timeout': 300, 'unavailable': False, 'joined_at': '2021-04-12T06:08:27.314000+00:00', 'members': [{'user': {'username': 'Lady Fran', 'id': '831043783881785344', 'discriminator': '1510', 'bot': True, 'avatar': 'cfc84e0cdce669946fea79add2cb50ef'}, 'roles': ['831048100520656977', '831322236266741771'], 'mute': False, 'joined_at': '2021-04-12T06:08:27.314000+00:00', 'hoisted_role': '831322236266741771', 'deaf': False}], 'preferred_locale': 'en-US', 'premium_subscription_count': 0, 'max_members': 100000, 'name': 'Test Server', 'vanity_url_code': None, 'mfa_level': 0, 'guild_hashes': {'version': 1, 'roles': {'omitted': False, 'hash': '+GOnzvltND4'}, 'metadata': {'omitted': False, 'hash': 'PqUdn/SxO4U'}, 'channels': {'omitted': False, 'hash': 'N552FC+LEMc'}}, 'owner_id': '172476429081116673', 'nsfw': False, 'explicit_content_filter': 0, 'afk_channel_id': None, 'lazy': True, 'default_message_notifications': 0, 'public_updates_channel_id': None, 'description': None, 'icon': None, 'large': False, 'channels': [{'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Text Channels', 'id': '831045635440246844'}, {'type': 4, 'position': 0, 'permission_overwrites': [], 'name': 'Voice Channels', 'id': '831045635440246845'}, {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '831045635440246844', 'name': 'general', 'last_message_id': '831323714716827728', 'id': '831045635440246846'}, {'user_limit': 0, 'type': 2, 'rtc_region': None, 'position': 0, 'permission_overwrites': [], 'parent_id': '831045635440246845', 'name': 'General', 'id': '831045635440246847', 'bitrate': 64000}, {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 1, 'permission_overwrites': [], 'parent_id': '831045635440246844', 'name': 'test-channel', 'last_message_id': '832035205606539275', 'id': '831323715345711114'}, {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 2, 'permission_overwrites': [], 'parent_id': '831045635440246845', 'name': 'music', 'last_message_id': '831339300062101546', 'id': '831330093572947968'}], 'features': [], 'splash': None, 'region': 'us-central', 'emojis': [], 'verification_level': 0, 'premium_tier': 0, 'threads': [], 'max_video_channel_users': 25, 'id': '831045634831155211', 'application_id': None}}
+2021-04-14 19:36:39,629:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:39,629:DEBUG:discord.client: Dispatching event socket_raw_send
+2021-04-14 19:36:39,690:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:39,690:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBERS_CHUNK', 's': 3, 'op': 0, 'd': {'nonce': '2edae7aa44677d46854c098cd151ea16', 'members': [{'user': {'username': 'The Real Dante', 'public_flags': 512, 'id': '172476429081116673', 'discriminator': '0703', 'avatar': '45897ab7f959b0b29851870e0c512771'}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-12T05:58:39.513000+00:00', 'is_pending': False, 'hoisted_role': None, 'deaf': False}, {'user': {'username': 'Lady Fran', 'id': '831043783881785344', 'discriminator': '1510', 'bot': True, 'avatar': 'cfc84e0cdce669946fea79add2cb50ef'}, 'roles': ['831048100520656977', '831322236266741771'], 'mute': False, 'joined_at': '2021-04-12T06:08:27.314000+00:00', 'hoisted_role': '831322236266741771', 'deaf': False}, {'user': {'username': 'ChloePrice', 'id': '831075277932593162', 'discriminator': '9698', 'avatar': None}, 'roles': [], 'mute': False, 'joined_at': '2021-04-12T08:31:14.802000+00:00', 'hoisted_role': None, 'deaf': False}], 'guild_id': '831045634831155211', 'chunk_index': 0, 'chunk_count': 1}}
+2021-04-14 19:36:39,690:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:39,691:DEBUG:discord.state: Processed a chunk for 3 members in guild ID 831045634831155211.
+2021-04-14 19:36:41,631:DEBUG:discord.client: Dispatching event guild_available
+2021-04-14 19:36:41,631:DEBUG:discord.client: Dispatching event ready
+2021-04-14 19:36:45,833:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:45,834:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 4, 'op': 0, 'd': {'user_id': '172476429081116673', 'timestamp': 1618443405, 'member': {'user': {'username': 'The Real Dante', 'public_flags': 512, 'id': '172476429081116673', 'discriminator': '0703', 'avatar': '45897ab7f959b0b29851870e0c512771'}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-12T05:58:39.513000+00:00', 'is_pending': False, 'hoisted_role': None, 'deaf': False}, 'channel_id': '831323715345711114', 'guild_id': '831045634831155211'}}
+2021-04-14 19:36:45,834:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:45,835:DEBUG:discord.client: Dispatching event typing
+2021-04-14 19:36:46,569:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:46,569:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 5, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2021-04-14T23:36:46.544000+00:00', 'referenced_message': None, 'pinned': False, 'nonce': '832036694403317760', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-12T05:58:39.513000+00:00', 'is_pending': False, 'hoisted_role': None, 'deaf': False}, 'id': '832036694840049714', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '?create-channel', 'components': [], 'channel_id': '831323715345711114', 'author': {'username': 'The Real Dante', 'public_flags': 512, 'id': '172476429081116673', 'discriminator': '0703', 'avatar': '45897ab7f959b0b29851870e0c512771'}, 'attachments': [], 'guild_id': '831045634831155211'}}
+2021-04-14 19:36:46,569:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:46,569:DEBUG:discord.client: Dispatching event message
+2021-04-14 19:36:46,569:DEBUG:discord.client: Dispatching event command
+2021-04-14 19:36:46,569:DEBUG:discord.client: Dispatching event command_error
+2021-04-14 19:36:46,649:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:46,650:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 6, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2021-04-14T23:36:46.640000+00:00', 'referenced_message': None, 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['831048100520656977', '831322236266741771'], 'mute': False, 'joined_at': '2021-04-12T06:08:27.314000+00:00', 'hoisted_role': '831322236266741771', 'deaf': False}, 'id': '832036695242833940', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'You do not have the correct role for this command.', 'components': [], 'channel_id': '831323715345711114', 'author': {'username': 'Lady Fran', 'public_flags': 0, 'id': '831043783881785344', 'discriminator': '1510', 'bot': True, 'avatar': 'cfc84e0cdce669946fea79add2cb50ef'}, 'attachments': [], 'guild_id': '831045634831155211'}}
+2021-04-14 19:36:46,650:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:46,650:DEBUG:discord.client: Dispatching event message
+2021-04-14 19:36:46,661:DEBUG:discord.http: POST https://discord.com/api/v7/channels/831323715345711114/messages with {"content":"You do not have the correct role for this command."} has returned 200
+2021-04-14 19:36:46,662:DEBUG:discord.http: POST https://discord.com/api/v7/channels/831323715345711114/messages has received {'id': '832036695242833940', 'type': 0, 'content': 'You do not have the correct role for this command.', 'channel_id': '831323715345711114', 'author': {'id': '831043783881785344', 'username': 'Lady Fran', 'avatar': 'cfc84e0cdce669946fea79add2cb50ef', 'discriminator': '1510', 'public_flags': 0, 'bot': True}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2021-04-14T23:36:46.640000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'referenced_message': None}
+2021-04-14 19:36:50,155:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:36:50,155:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBER_UPDATE', 's': 7, 'op': 0, 'd': {'user': {'username': 'The Real Dante', 'public_flags': 512, 'id': '172476429081116673', 'discriminator': '0703', 'avatar': '45897ab7f959b0b29851870e0c512771'}, 'roles': ['831322236266741771'], 'premium_since': None, 'pending': False, 'nick': None, 'joined_at': '2021-04-12T05:58:39.513000+00:00', 'is_pending': False, 'guild_id': '831045634831155211'}}
+2021-04-14 19:36:50,155:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:36:50,155:DEBUG:discord.client: Dispatching event member_update
+2021-04-14 19:37:20,731:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 7.
+2021-04-14 19:37:20,773:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:37:20,773:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:37:20,773:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:37:49,327:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:37:49,327:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBER_REMOVE', 's': 8, 'op': 0, 'd': {'user': {'username': 'ChloePrice', 'public_flags': 0, 'id': '831075277932593162', 'discriminator': '9698', 'avatar': None}, 'guild_id': '831045634831155211'}}
+2021-04-14 19:37:49,327:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:37:49,327:DEBUG:discord.client: Dispatching event member_remove
+2021-04-14 19:38:00,958:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:00,958:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBER_ADD', 's': 9, 'op': 0, 'd': {'user': {'username': 'ChloePrice', 'public_flags': 0, 'id': '831075277932593162', 'discriminator': '9698', 'avatar': None}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-14T23:38:00.945236+00:00', 'is_pending': False, 'guild_id': '831045634831155211', 'deaf': False}}
+2021-04-14 19:38:00,958:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:38:00,958:DEBUG:discord.client: Dispatching event member_join
+2021-04-14 19:38:00,970:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:00,971:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_MEMBER_UPDATE', 's': 10, 'op': 0, 'd': {'user': {'username': 'ChloePrice', 'id': '831075277932593162', 'discriminator': '9698', 'avatar': None}, 'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-14T23:38:00.945236+00:00', 'is_pending': False, 'hoisted_role': None, 'guild_id': '831045634831155211', 'deaf': False}}
+2021-04-14 19:38:00,971:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:38:00,971:DEBUG:discord.client: Dispatching event member_update
+2021-04-14 19:38:01,110:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:01,110:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 11, 'op': 0, 'd': {'type': 7, 'tts': False, 'timestamp': '2021-04-14T23:38:01.036000+00:00', 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': [], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-14T23:38:00.945236+00:00', 'is_pending': False, 'hoisted_role': None, 'deaf': False}, 'id': '832037007281618964', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '', 'components': [], 'channel_id': '831045635440246846', 'author': {'username': 'ChloePrice', 'public_flags': 0, 'id': '831075277932593162', 'discriminator': '9698', 'avatar': None}, 'attachments': [], 'guild_id': '831045634831155211'}}
+2021-04-14 19:38:01,110:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:38:01,110:DEBUG:discord.client: Dispatching event message
+2021-04-14 19:38:01,191:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:01,191:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'CHANNEL_CREATE', 's': 12, 'op': 0, 'd': {'type': 1, 'recipients': [{'username': 'ChloePrice', 'public_flags': 0, 'id': '831075277932593162', 'discriminator': '9698', 'avatar': None}], 'last_message_id': None, 'id': '832037007475605515'}}
+2021-04-14 19:38:01,191:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:38:01,191:DEBUG:discord.client: Dispatching event private_channel_create
+2021-04-14 19:38:01,195:DEBUG:discord.http: POST https://discord.com/api/v7/users/@me/channels with {"recipient_id":831075277932593162} has returned 200
+2021-04-14 19:38:01,195:DEBUG:discord.http: POST https://discord.com/api/v7/users/@me/channels has received {'id': '832037007475605515', 'type': 1, 'last_message_id': None, 'recipients': [{'id': '831075277932593162', 'username': 'ChloePrice', 'avatar': None, 'discriminator': '9698', 'public_flags': 0}]}
+2021-04-14 19:38:01,370:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:01,370:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'CHANNEL_CREATE', 's': 13, 'op': 0, 'd': {'type': 1, 'recipients': [{'username': 'ChloePrice', 'public_flags': 0, 'id': '831075277932593162', 'discriminator': '9698', 'avatar': None}], 'last_message_id': '832037008493903922', 'id': '832037007475605515'}}
+2021-04-14 19:38:01,370:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:38:01,370:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:01,370:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 14, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2021-04-14T23:38:01.325000+00:00', 'referenced_message': None, 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'id': '832037008493903922', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': 'Hi ChloePrice, welcome to my Discord server!', 'components': [], 'channel_id': '832037007475605515', 'author': {'username': 'Lady Fran', 'public_flags': 0, 'id': '831043783881785344', 'discriminator': '1510', 'bot': True, 'avatar': 'cfc84e0cdce669946fea79add2cb50ef'}, 'attachments': []}}
+2021-04-14 19:38:01,370:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:38:01,371:DEBUG:discord.client: Dispatching event message
+2021-04-14 19:38:01,425:DEBUG:discord.http: POST https://discord.com/api/v7/channels/832037007475605515/messages with {"content":"Hi ChloePrice, welcome to my Discord server!"} has returned 200
+2021-04-14 19:38:01,425:DEBUG:discord.http: POST https://discord.com/api/v7/channels/832037007475605515/messages has received {'id': '832037008493903922', 'type': 0, 'content': 'Hi ChloePrice, welcome to my Discord server!', 'channel_id': '832037007475605515', 'author': {'id': '831043783881785344', 'username': 'Lady Fran', 'avatar': 'cfc84e0cdce669946fea79add2cb50ef', 'discriminator': '1510', 'public_flags': 0, 'bot': True}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2021-04-14T23:38:01.325000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'referenced_message': None}
+2021-04-14 19:38:01,981:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 14.
+2021-04-14 19:38:02,025:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:02,025:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:38:02,025:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:38:43,233:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 14.
+2021-04-14 19:38:43,296:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:38:43,297:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:38:43,297:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:39:24,483:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 14.
+2021-04-14 19:39:24,526:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:39:24,527:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:39:24,527:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:40:05,733:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 14.
+2021-04-14 19:40:05,779:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:40:05,780:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:40:05,780:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:40:46,985:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 14.
+2021-04-14 19:40:47,028:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:40:47,028:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:40:47,028:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:41:28,236:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 14.
+2021-04-14 19:41:28,290:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:41:28,290:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:41:28,290:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:42:09,488:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 14.
+2021-04-14 19:42:09,531:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:42:09,531:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:42:09,531:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:42:11,203:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:42:11,203:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 15, 'op': 0, 'd': {'user_id': '172476429081116673', 'timestamp': 1618443731, 'member': {'user': {'username': 'The Real Dante', 'public_flags': 512, 'id': '172476429081116673', 'discriminator': '0703', 'avatar': '45897ab7f959b0b29851870e0c512771'}, 'roles': ['831322236266741771'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-12T05:58:39.513000+00:00', 'is_pending': False, 'hoisted_role': '831322236266741771', 'deaf': False}, 'channel_id': '831323715345711114', 'guild_id': '831045634831155211'}}
+2021-04-14 19:42:11,203:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:42:11,203:DEBUG:discord.client: Dispatching event typing
+2021-04-14 19:42:25,772:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:42:25,773:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'TYPING_START', 's': 16, 'op': 0, 'd': {'user_id': '172476429081116673', 'timestamp': 1618443745, 'member': {'user': {'username': 'The Real Dante', 'public_flags': 512, 'id': '172476429081116673', 'discriminator': '0703', 'avatar': '45897ab7f959b0b29851870e0c512771'}, 'roles': ['831322236266741771'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-12T05:58:39.513000+00:00', 'is_pending': False, 'hoisted_role': '831322236266741771', 'deaf': False}, 'channel_id': '831323715345711114', 'guild_id': '831045634831155211'}}
+2021-04-14 19:42:25,773:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:42:25,773:DEBUG:discord.client: Dispatching event typing
+2021-04-14 19:42:35,341:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:42:35,341:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 17, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2021-04-14T23:42:35.243000+00:00', 'referenced_message': None, 'pinned': False, 'nonce': '832038157166837760', 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['831322236266741771'], 'premium_since': None, 'pending': False, 'nick': None, 'mute': False, 'joined_at': '2021-04-12T05:58:39.513000+00:00', 'is_pending': False, 'hoisted_role': '831322236266741771', 'deaf': False}, 'id': '832038157390315531', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '?add 2987 7892', 'components': [], 'channel_id': '831323715345711114', 'author': {'username': 'The Real Dante', 'public_flags': 512, 'id': '172476429081116673', 'discriminator': '0703', 'avatar': '45897ab7f959b0b29851870e0c512771'}, 'attachments': [], 'guild_id': '831045634831155211'}}
+2021-04-14 19:42:35,341:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:42:35,341:DEBUG:discord.client: Dispatching event message
+2021-04-14 19:42:35,342:DEBUG:discord.client: Dispatching event command
+2021-04-14 19:42:35,518:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:42:35,518:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'MESSAGE_CREATE', 's': 18, 'op': 0, 'd': {'type': 0, 'tts': False, 'timestamp': '2021-04-14T23:42:35.511000+00:00', 'referenced_message': None, 'pinned': False, 'mentions': [], 'mention_roles': [], 'mention_everyone': False, 'member': {'roles': ['831048100520656977', '831322236266741771'], 'mute': False, 'joined_at': '2021-04-12T06:08:27.314000+00:00', 'hoisted_role': '831322236266741771', 'deaf': False}, 'id': '832038158513602600', 'flags': 0, 'embeds': [], 'edited_timestamp': None, 'content': '10879', 'components': [], 'channel_id': '831323715345711114', 'author': {'username': 'Lady Fran', 'public_flags': 0, 'id': '831043783881785344', 'discriminator': '1510', 'bot': True, 'avatar': 'cfc84e0cdce669946fea79add2cb50ef'}, 'attachments': [], 'guild_id': '831045634831155211'}}
+2021-04-14 19:42:35,518:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:42:35,518:DEBUG:discord.client: Dispatching event message
+2021-04-14 19:42:35,545:DEBUG:discord.http: POST https://discord.com/api/v7/channels/831323715345711114/messages with {"content":"10879"} has returned 200
+2021-04-14 19:42:35,545:DEBUG:discord.http: POST https://discord.com/api/v7/channels/831323715345711114/messages has received {'id': '832038158513602600', 'type': 0, 'content': '10879', 'channel_id': '831323715345711114', 'author': {'id': '831043783881785344', 'username': 'Lady Fran', 'avatar': 'cfc84e0cdce669946fea79add2cb50ef', 'discriminator': '1510', 'public_flags': 0, 'bot': True}, 'attachments': [], 'embeds': [], 'mentions': [], 'mention_roles': [], 'pinned': False, 'mention_everyone': False, 'tts': False, 'timestamp': '2021-04-14T23:42:35.511000+00:00', 'edited_timestamp': None, 'flags': 0, 'components': [], 'referenced_message': None}
+2021-04-14 19:42:35,545:DEBUG:discord.client: Dispatching event command_completion
+2021-04-14 19:42:50,741:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 18.
+2021-04-14 19:42:50,786:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:42:50,786:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:42:50,786:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:43:31,994:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 18.
+2021-04-14 19:43:32,043:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:43:32,043:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:43:32,043:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:13,068:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:13,068:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'CHANNEL_CREATE', 's': 19, 'op': 0, 'd': {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 3, 'permission_overwrites': [], 'parent_id': '831045635440246844', 'nsfw': False, 'name': 'welcome', 'last_message_id': None, 'id': '832038567512506388', 'guild_id': '831045634831155211', 'guild_hashes': {'version': 1, 'roles': {'hash': '+GOnzvltND4'}, 'metadata': {'hash': 'PqUdn/SxO4U'}, 'channels': {'hash': 'wBZ8GmX4/NI'}}}}
+2021-04-14 19:44:13,068:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:13,068:DEBUG:discord.client: Dispatching event guild_channel_create
+2021-04-14 19:44:13,246:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 19.
+2021-04-14 19:44:13,291:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:13,291:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:44:13,291:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:16,395:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:16,396:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'CHANNEL_UPDATE', 's': 20, 'op': 0, 'd': {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 0, 'permission_overwrites': [], 'parent_id': '831045635440246844', 'nsfw': False, 'name': 'welcome', 'last_message_id': None, 'id': '832038567512506388', 'guild_id': '831045634831155211', 'guild_hashes': {'version': 1, 'roles': {'hash': '+GOnzvltND4'}, 'metadata': {'hash': 'PqUdn/SxO4U'}, 'channels': {'hash': 'hFB+B6bWkQs'}}}}
+2021-04-14 19:44:16,396:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:16,397:DEBUG:discord.client: Dispatching event guild_channel_update
+2021-04-14 19:44:16,397:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:16,397:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'CHANNEL_UPDATE', 's': 21, 'op': 0, 'd': {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 1, 'permission_overwrites': [], 'parent_id': '831045635440246844', 'nsfw': False, 'name': 'general', 'last_message_id': '832037007281618964', 'id': '831045635440246846', 'guild_id': '831045634831155211', 'guild_hashes': {'version': 1, 'roles': {'hash': '+GOnzvltND4'}, 'metadata': {'hash': 'PqUdn/SxO4U'}, 'channels': {'hash': '9LBKGPj6xBs'}}}}
+2021-04-14 19:44:16,398:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:16,398:DEBUG:discord.client: Dispatching event guild_channel_update
+2021-04-14 19:44:16,399:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:16,400:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'CHANNEL_UPDATE', 's': 22, 'op': 0, 'd': {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 2, 'permission_overwrites': [], 'parent_id': '831045635440246844', 'nsfw': False, 'name': 'test-channel', 'last_message_id': '832038158513602600', 'id': '831323715345711114', 'guild_id': '831045634831155211', 'guild_hashes': {'version': 1, 'roles': {'hash': '+GOnzvltND4'}, 'metadata': {'hash': 'PqUdn/SxO4U'}, 'channels': {'hash': 'wd9RNiry9sQ'}}}}
+2021-04-14 19:44:16,400:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:16,401:DEBUG:discord.client: Dispatching event guild_channel_update
+2021-04-14 19:44:16,460:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:16,461:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'CHANNEL_UPDATE', 's': 23, 'op': 0, 'd': {'type': 0, 'topic': None, 'rate_limit_per_user': 0, 'position': 3, 'permission_overwrites': [], 'parent_id': '831045635440246845', 'nsfw': False, 'name': 'music', 'last_message_id': '831339300062101546', 'id': '831330093572947968', 'guild_id': '831045634831155211', 'guild_hashes': {'version': 1, 'roles': {'hash': '+GOnzvltND4'}, 'metadata': {'hash': 'PqUdn/SxO4U'}, 'channels': {'hash': '6zs9ly5JXqM'}}}}
+2021-04-14 19:44:16,461:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:16,461:DEBUG:discord.client: Dispatching event guild_channel_update
+2021-04-14 19:44:32,727:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:32,727:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': 'GUILD_UPDATE', 's': 24, 'op': 0, 'd': {'widget_channel_id': None, 'system_channel_id': '832038567512506388', 'premium_tier': 0, 'system_channel_flags': 0, 'discovery_splash': None, 'application_id': None, 'guild_hashes': {'version': 1, 'roles': {'hash': '+GOnzvltND4'}, 'metadata': {'hash': 'rNWWRcYUSOw'}, 'channels': {'hash': '6zs9ly5JXqM'}}, 'owner_id': '172476429081116673', 'banner': None, 'features': [], 'id': '831045634831155211', 'public_updates_channel_id': None, 'verification_level': 0, 'roles': [{'position': 0, 'permissions_new': '6546771521', 'permissions': 104320577, 'name': '@everyone', 'mentionable': False, 'managed': False, 'id': '831045634831155211', 'hoist': False, 'color': 0}, {'tags': {'bot_id': '831043783881785344'}, 'position': 1, 'permissions_new': '8', 'permissions': 8, 'name': 'Lady Fran', 'mentionable': False, 'managed': True, 'id': '831048100520656977', 'hoist': False, 'color': 0}, {'position': 2, 'permissions_new': '7888948825', 'permissions': 1446497881, 'name': 'Admin', 'mentionable': False, 'managed': False, 'id': '831322236266741771', 'hoist': True, 'color': 15844367}], 'embed_channel_id': None, 'splash': None, 'afk_timeout': 300, 'vanity_url_code': None, 'icon': None, 'guild_id': '831045634831155211', 'emojis': [], 'max_video_channel_users': 25, 'preferred_locale': 'en-US', 'region': 'us-central', 'explicit_content_filter': 0, 'rules_channel_id': None, 'default_message_notifications': 0, 'name': 'Test Server', 'nsfw': False, 'max_members': 100000, 'widget_enabled': False, 'description': None, 'embed_enabled': False, 'premium_subscription_count': 0, 'mfa_level': 0, 'afk_channel_id': None, 'max_presences': None}}
+2021-04-14 19:44:32,727:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:44:32,727:DEBUG:discord.client: Dispatching event guild_update
+2021-04-14 19:44:54,496:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 24.
+2021-04-14 19:44:54,551:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:44:54,551:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:44:54,551:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:45:35,749:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 24.
+2021-04-14 19:45:35,803:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:45:35,804:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:45:35,804:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:46:17,001:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 24.
+2021-04-14 19:46:17,068:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:46:17,069:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:46:17,069:DEBUG:discord.client: Dispatching event socket_response
+2021-04-14 19:46:58,253:DEBUG:discord.gateway: Keeping shard ID None websocket alive with sequence 24.
+2021-04-14 19:46:58,296:DEBUG:discord.client: Dispatching event socket_raw_receive
+2021-04-14 19:46:58,296:DEBUG:discord.gateway: For Shard ID None: WebSocket Event: {'t': None, 's': None, 'op': 11, 'd': None}
+2021-04-14 19:46:58,296:DEBUG:discord.client: Dispatching event socket_response
