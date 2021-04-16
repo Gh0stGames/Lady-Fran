@@ -12,20 +12,19 @@ handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(me
 logger.addHandler(handler)
 
 description = '''A bot meant to be a learning tool for Python and bot creation.
-
-Eventually will made into a feature heavy FFXIV/General admin bot.
-'''
+                 Eventually will made into a feature heavy FFXIV/General admin bot.'''
 
 intents = discord.Intents.default()
 intents.members = True
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
+TOKENDB = os.getenv('TOKENDB')
 
 menu = DefaultMenu('◀️', '▶️', '❌')
 
 bot = commands.Bot(
-    command_prefix='?',
+    command_prefix='$',
     description=description,
     intents=intents,
     owner_id=172476429081116673,
@@ -60,5 +59,9 @@ async def on_member_join(member):
 # Start the server
 keep_alive.keep_alive()
 
+def run():
+    bot.run(TOKEN, bot=True, reconnect=True)
+
 # Login the bot
-bot.run(TOKEN, bot=True, reconnect=True)
+if __name__ == '__main__':
+    run()
