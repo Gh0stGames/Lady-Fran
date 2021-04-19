@@ -1,5 +1,12 @@
 # bot.py
-import os, random, discord, asyncio, nacl, ffmpeg, youtube_dl, logging, keep_alive
+import os
+import random
+import asyncio
+import logging
+
+import discord
+import nacl
+import keep_alive
 
 from dotenv import load_dotenv
 from discord.ext import commands

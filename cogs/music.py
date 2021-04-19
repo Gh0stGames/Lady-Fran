@@ -1,4 +1,7 @@
-import ffmpeg, youtube_dl, discord
+import discord
+import ffmpeg
+import youtube_dl
+
 from discord.ext import commands
 
 
@@ -25,6 +28,7 @@ ffmpeg_options = {
 
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
+
 class YTDLSource(discord.PCMVolumeTransformer):
     def __init__(self, source, *, data, volume=0.5):
         super().__init__(source, volume)
@@ -45,6 +49,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
         filename = data['url'] if stream else ytdl.prepare_filename(data)
         return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
+
 
 class Music(commands.Cog):
     """All music commands."""

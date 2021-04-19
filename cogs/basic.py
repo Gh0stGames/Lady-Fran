@@ -1,13 +1,17 @@
+import os
+import random
+import discord
+
 from discord.ext import commands
 from easypydb import DB
 from dotenv import load_dotenv
-import random
-import discord
-import os
+
 
 TOKENDB = os.getenv('TOKENDB')
 database = DB("MoneyDB", TOKENDB)
 
+
+# Define all Basic commands
 class Basic(commands.Cog):
     """Contains all basic commands."""
     def __init__(self, bot):
