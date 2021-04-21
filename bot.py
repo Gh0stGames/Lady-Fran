@@ -41,7 +41,7 @@ bot = commands.Bot(
 bot.help_command = PrettyHelp(navigation=menu, color=discord.Colour.green())
 
 extensions = (
-                'cogs.fun',
+                'cogs.basic',
                 'cogs.music',
                 'cogs.admin',
                 'cogs.destroy',
