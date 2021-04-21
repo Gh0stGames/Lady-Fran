@@ -14,7 +14,7 @@ database = DB("MoneyDB", TOKENDB)
 
 
 # Define all Basic commands
-class Basic(commands.Cog):
+class Fun(commands.Cog):
     """fft, roll, add, work, balance"""
     def __init__(self, bot):
         self.bot = bot
@@ -87,4 +87,4 @@ class Basic(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Basic(bot))
+    bot.add_cog(Fun(bot))

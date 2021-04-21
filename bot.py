@@ -41,11 +41,11 @@ bot = commands.Bot(
 bot.help_command = PrettyHelp(navigation=menu, color=discord.Colour.green())
 
 extensions = (
-                'cogs.basic',
                 'cogs.music',
                 'cogs.admin',
                 'cogs.destroy',
-                'cogs.wikipedia'
+                'cogs.wikipedia',
+                'cogs.fun'
                 )
 
 @bot.event
