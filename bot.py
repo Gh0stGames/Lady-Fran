@@ -82,11 +82,12 @@ async def on_message(ctx, message:'holocaust'):
         await ctx.send(embed=emb)
 """
 # Start the server
-keep_alive.keep_alive()
+#keep_alive.keep_alive()
 
-def run():
-    bot.run(TOKEN, bot=True, reconnect=True)
+#def run():
+    #bot.run(TOKEN, bot=True, reconnect=True)
 
 # Login the bot
-if __name__ == '__main__':
-    run()
+#if __name__ == '__main__':
+#    run()
+bot.run(TOKEN, bot=True, reconnect=True)
