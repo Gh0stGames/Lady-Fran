@@ -52,7 +52,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
 
 class Music(commands.Cog):
-    """All music commands."""
+    """join, play, yt, stream, volume, stop"""
     def __init__(self, bot):
         self.bot = bot
 

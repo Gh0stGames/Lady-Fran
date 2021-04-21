@@ -3,6 +3,7 @@ import os
 import random
 import asyncio
 import logging
+import sys
 
 import discord
 import nacl
@@ -18,8 +19,8 @@ handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w'
 handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
-description = '''A bot meant to be a learning tool for Python and bot creation.
-                 Eventually will made into a feature heavy FFXIV/General admin bot.'''
+description = """A bot meant to be a learning tool for Python and bot creation.
+                Eventually will made into a feature heavy FFXIV/General admin bot."""
 
 intents = discord.Intents.default()
 intents.members = True
@@ -28,7 +29,7 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 TOKENDB = os.getenv('TOKENDB')
 
-menu = DefaultMenu('◀️', '▶️', '❌')
+menu = DefaultMenu('◀️', '▶️', '❌', active_time=15)
 
 bot = commands.Bot(
     command_prefix='$',
@@ -39,14 +40,23 @@ bot = commands.Bot(
 )
 bot.help_command = PrettyHelp(navigation=menu, color=discord.Colour.green())
 
-cogs = ['cogs.basic','cogs.music']
+extensions = (
+                'cogs.fun',
+                'cogs.music',
+                'cogs.admin',
+                'cogs.destroy',
+                'cogs.wikipedia'
+                )
 
 @bot.event
 async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
     #bot.remove_command('help')
-    for cog in cogs:
-        bot.load_extension(cog)
+    for extension in extensions:
+            try:
+                bot.load_extension(extension)
+            except Exception as e:
+                print(f"Couldn't load the following extension : {extension} ; :{e}", file=sys.stderr)
     return
 
 # Sends a message to the user if they don't have the correct role for a command.
@@ -62,7 +72,15 @@ async def on_member_join(member):
     await member.dm_channel.send(
         f'Hi {member.name}, welcome to my Discord server!'
     )
-
+"""
+@bot.event
+async def on_message(ctx, message:'holocaust'):
+    holo_count = 0
+    if message.content == "holocaust":
+        holo_count = holo_count+1
+        emb = discord.Embed('Holocaust Count: ',description=holo_count,color=discord.Colour.green())
+        await ctx.send(embed=emb)
+"""
 # Start the server
 keep_alive.keep_alive()
 
