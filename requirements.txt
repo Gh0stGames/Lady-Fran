@@ -38,4 +38,3 @@ wikipedia==1.4.0
 yarg==0.1.9
 yarl==1.6.3
 youtube-dl==2021.4.7
-discord==82570
