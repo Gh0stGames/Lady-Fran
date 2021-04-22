@@ -39,7 +39,13 @@ bot = commands.Bot(
 )
 bot.help_command = PrettyHelp(navigation=menu, color=discord.Colour.green())
 
-extensions = ('cogs.music','cogs.admin','cogs.destroy','cogs.wikipedia','cogs.fun')
+extensions = (
+    'plugins.music',
+    'plugins.admin',
+    'plugins.destroy',
+    'plugins.wikipedia',
+    'plugins.fun'
+    )
 
 @bot.event
 async def on_ready():
