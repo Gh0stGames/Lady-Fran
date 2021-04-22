@@ -7,7 +7,6 @@ import sys
 
 import discord
 import nacl
-import keep_alive
 
 from dotenv import load_dotenv
 from discord.ext import commands
@@ -81,8 +80,6 @@ async def on_message(ctx, message:'holocaust'):
         emb = discord.Embed('Holocaust Count: ',description=holo_count,color=discord.Colour.green())
         await ctx.send(embed=emb)
 """
-# Start the server
-#keep_alive.keep_alive()
 
 def run():
     bot.run(TOKEN, bot=True, reconnect=True)
