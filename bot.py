@@ -34,6 +34,9 @@ database = DB("HoloCount", TOKENDB)
 
 menu = DefaultMenu('◀️', '▶️', '❌', active_time=15)
 
+global holo_count
+holo_count = 0
+
 bot = commands.Bot(
     command_prefix='$',
     description=description,
@@ -79,7 +82,7 @@ async def on_member_join(member):
 @bot.event
 async def on_message(message):
     if message.content.startswith('holocaust'):
-        global holo_count = 0
+        global holo_count
         holo_count += 1
         emb = discord.Embed(
             title = f'Holocaust Count: ',
