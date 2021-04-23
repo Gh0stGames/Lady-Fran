@@ -4,6 +4,7 @@ import random
 import asyncio
 import logging
 import sys
+import json
 
 import discord
 import nacl
@@ -11,6 +12,7 @@ import nacl
 from dotenv import load_dotenv
 from discord.ext import commands
 from pretty_help import DefaultMenu, PrettyHelp
+from easypydb import DB
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
@@ -27,6 +29,7 @@ intents.members = True
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 TOKENDB = os.getenv('TOKENDB')
+database = DB("HoloCount", TOKENDB)
 
 menu = DefaultMenu('◀️', '▶️', '❌', active_time=15)
 
@@ -44,8 +47,9 @@ extensions = (
     'plugins.admin',
     'plugins.destroy',
     'plugins.wikipedia',
-    'plugins.fun'
-    )
+    'plugins.fun',
+    #'plugins.economy'
+)
 
 @bot.event
 async def on_ready():
@@ -55,7 +59,7 @@ async def on_ready():
             try:
                 bot.load_extension(extension)
             except Exception as e:
-                print(f"Couldn't load the following extension : {extension} ; :{e}", file=sys.stderr)
+                print(f"Couldn't load the following extension: {extension}; {e}", file=sys.stderr)
     return
 
 # Sends a message to the user if they don't have the correct role for a command.
@@ -68,22 +72,20 @@ async def on_command_error(ctx, error):
 @bot.event
 async def on_member_join(member):
     await member.create_dm()
-    await member.dm_channel.send(
-        f'Hi {member.name}, welcome to my Discord server!'
-    )
+    await member.dm_channel.send(f'Hi {member.name}, welcome to {discord.Guild}!')
 """
 @bot.event
-async def on_message(ctx, message:'holocaust'):
+async def on_message(message):
     holo_count = 0
-    if message.content == "holocaust":
-        holo_count = holo_count+1
-        emb = discord.Embed('Holocaust Count: ',description=holo_count,color=discord.Colour.green())
-        await ctx.send(embed=emb)
+    while message.content.startswith('holocaust'):
+        total = holo_count+1
+        emb = discord.Embed(
+            title = f'Holocaust Count: ',
+            description = f'The holo count is now: {total}',
+            color = discord.Colour.green()
+        )
+        #await message.channel.purge(limit=1)
+        await message.channel.send(embed=emb, delete_after=10)
 """
 
-def run():
-    bot.run(TOKEN, bot=True, reconnect=True)
-
-# Login the bot
-if __name__ == '__main__':
-    run()
+bot.run(TOKEN, bot=True, reconnect=True)

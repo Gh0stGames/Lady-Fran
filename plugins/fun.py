@@ -1,6 +1,7 @@
 import os
 import random
 import datetime
+import json
 
 import discord
 
@@ -8,7 +9,7 @@ from discord.ext import commands
 from easypydb import DB
 from dotenv import load_dotenv
 
-
+# Get database token from .env file
 TOKENDB = os.getenv('TOKENDB')
 database = DB("MoneyDB", TOKENDB)
 
@@ -20,20 +21,24 @@ class Fun(commands.Cog):
         self.bot = bot
 
 # Commands that are just for fun.
-    @commands.command(name='fft', help='Responds with a random quote from Final Fantasy Tactics')
-    async def fft_command(self, ctx):
-        #fft_quotes = ['Names don\'t matter. What\'s important is how you live your life.', 'A \'heretic\' coming to church... pretty bold...', 'Ignorance itself is a crime!']
-        with open('fft_quotes.txt', 'r') as f:
-            lines = [l.strip() for l in f.readlines()]
-            emb = discord.Embed(
-                title='FFT Quote',
-                description=random.choice(lines),
-                color=discord.Colour.green()
-            )
-            await ctx.send(embed=emb)
+    @commands.command(
+        name='fft',
+        help='Responds with a random quote from Final Fantasy Tactics'
+    )
+    async def _fft(self, ctx):
+        quotes = _get_quotes()
+        await ctx.send(quotes)
 
-    @commands.command(name='roll', help='Rolls dice in NdN format')
-    async def roll_command(self, ctx, dice: str):
+    async def _get_quotes(self):
+        with open('fft_quotes.txt', 'r') as quotes:
+            quote = file.readlines(self)
+        return quote
+
+    @commands.command(
+        name='roll',
+        help='Rolls dice in NdN format'
+    )
+    async def _roll(self, ctx, dice: str):
         # Rolls a dice in NdN format.
         try:
             rolls, limit = map(int, dice.split('d'))
@@ -44,9 +49,44 @@ class Fun(commands.Cog):
         result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
         await ctx.send(result)
 
-    @commands.command(name='add', help='Adds two numbers together.')
-    async def add(self, ctx, left: int, right: int):
+    @commands.command(
+        name='add',
+        help='Adds two numbers together.'
+    )
+    async def _add(self, ctx, left: int, right: int):
         await ctx.send(left + right)
+
+    @commands.command(
+        name='coinflip'
+    )
+    async def _coinflip(self, ctx):
+        result = random.randint(0, 1)
+        if result == 0:
+            emb = discord.Embed(title=f'Coinflip',description=f'{ctx.message.author.mention} The coin landed on... Tails!',color=discord.Colour.green())
+            await ctx.send(embed=emb)
+        else:
+            emb = discord.Embed(title=f'Coinflip',description=f'{ctx.message.author.mention} The coin landed on... Heads!',color=discord.Colour.green())
+            await ctx.send(embed=emb)
+        await ctx.message.delete()
+
+    @commands.command(
+        name='lotto'
+    )
+    async def _lottery(self, ctx):
+        final = []
+        for i in range(3):
+            a = random.choice(['X','O','Q'])
+
+            final.append(a)
+        emb = discord.Embed(title=f'Lottery',description=str(final),color=discord.Colour.green())
+        await ctx.send(embed=emb, delete_after=15)
+        if final[0] == final[1] == final[2]:
+            emb = discord.Embed(title='Winner, winner, chicken dinner!',description=f'Congrats, {ctx.author.mention}! You won!',color=discord.Colour.green())
+            await ctx.send(embed=emb, delete_after=15)
+        else:
+            emb = discord.Embed(title=f'What a loser...',description=f'You get... NOTHING!!! YOU LOSE!! GOOD DAY, SIR!!!',color=discord.Colour.green())
+            await ctx.send(embed=emb, delete_after=15)
+        await ctx.message.delete()
 
     @commands.command(
         name='work',
