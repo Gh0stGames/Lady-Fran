@@ -91,6 +91,5 @@ async def on_message(message):
         )
         await message.channel.purge(limit=1)
         await message.channel.send(embed=emb, delete_after=10)
-    break
 
 bot.run(TOKEN, bot=True, reconnect=True)
