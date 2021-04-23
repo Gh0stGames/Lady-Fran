@@ -14,6 +14,7 @@ from discord.ext import commands
 from pretty_help import DefaultMenu, PrettyHelp
 from easypydb import DB
 
+
 logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
@@ -73,19 +74,20 @@ async def on_command_error(ctx, error):
 async def on_member_join(member):
     await member.create_dm()
     await member.dm_channel.send(f'Hi {member.name}, welcome to {discord.Guild}!')
-"""
+
+
 @bot.event
 async def on_message(message):
-    holo_count = 0
-    while message.content.startswith('holocaust'):
-        total = holo_count+1
+    if message.content.startswith('holocaust'):
+        global holo_count = 0
+        holo_count += 1
         emb = discord.Embed(
             title = f'Holocaust Count: ',
-            description = f'The holo count is now: {total}',
+            description = f'The holo count is now: {holo_count}',
             color = discord.Colour.green()
         )
-        #await message.channel.purge(limit=1)
+        await message.channel.purge(limit=1)
         await message.channel.send(embed=emb, delete_after=10)
-"""
+
 
 bot.run(TOKEN, bot=True, reconnect=True)
